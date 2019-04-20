@@ -31,7 +31,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60218534-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-60218534-2');
@@ -94,15 +98,15 @@
                 </a>
             </div>
             <!--<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">-->
-                <!--<div class="btn-group">-->
-                    <!--<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"-->
-                            <!--aria-haspopup="true" aria-expanded="false">-->
-                        <!--Партнеры <span class="caret"></span>-->
-                    <!--</button>-->
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="http://primasv.tomsk.ru/">ООО "Прима СВ"</a></li>-->
-                    <!--</ul>-->
-                <!--</div>-->
+            <!--<div class="btn-group">-->
+            <!--<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown"-->
+            <!--aria-haspopup="true" aria-expanded="false">-->
+            <!--Партнеры <span class="caret"></span>-->
+            <!--</button>-->
+            <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="http://primasv.tomsk.ru/">ООО "Прима СВ"</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
             <!--</div>-->
         </div>
     </div>
@@ -111,30 +115,36 @@
 <!-- Stairs Section -->
 <section id="stairs-section" class="stairs-section">
     <div class="container">
-        <div class="row row-centered">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-centered grid-template">
-                <!-- data-gallery initializes the global click handler to display a gallery of elements -->
-                <a class="thumbnail" href="#" data-gallery>
-                    <img class="img-responsive" src=""/>
-                </a>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid" data-columns data-items="37">
+                    <script type="template">
+                        <div class="grid-item">
+                            <!-- data-gallery initializes the global click handler to display a gallery of elements -->
+                            <a href="img/stairs/stairs{index}.jpg" data-gallery>
+                                <img src="img/stairs/thumbs/stairs{index}.jpg"/>
+                            </a>
+                        </div>
+                    </script>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Doors Section -->
-<section id="doors-section" class="doors-section">
-    <div class="container">
-        <div class="row row-centered">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-centered grid-template">
-                <!-- data-gallery initializes the global click handler to display a gallery of elements -->
-                <a class="thumbnail" href="#" data-gallery>
-                    <img class="img-responsive" src=""/>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+<!--<section id="doors-section" class="doors-section">-->
+<!--    <div class="container">-->
+<!--        <div class="row row-centered">-->
+<!--            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-centered grid-template">-->
+<!--                &lt;!&ndash; data-gallery initializes the global click handler to display a gallery of elements &ndash;&gt;-->
+<!--                <a class="thumbnail" href="#" data-gallery>-->
+<!--                    <img class="img-responsive" src=""/>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery">
@@ -151,9 +161,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.blueimp-gallery.min.js"></script>
-
-<script src="js/doors.js"></script>
-<script src="js/stairs.js"></script>
+<script src="js/salvattore.min.js"></script>
 <script src="js/site.js"></script>
 
 </body>
