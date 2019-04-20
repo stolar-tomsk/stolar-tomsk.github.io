@@ -170,13 +170,13 @@ a:focus {
     }
 }
 
-@media screen and (min-width: 701px) and (max-width: 1000px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
     .grid[data-columns]::before {
         content: '3 .column.size-1of3';
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .grid[data-columns]::before {
         content: '2 .column.size-1of2';
     }
