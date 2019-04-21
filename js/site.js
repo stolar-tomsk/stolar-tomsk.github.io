@@ -84,9 +84,10 @@ $(function () {
 
         var $grid = $(this);
         var n = $grid.data('items');
+        var exclude = ($grid.data('exclude') || '').split(',');
         var template = $(this).find('script[type=template]').text();
 
-        var loadedImages = n;
+        var loadedImages = n - exclude.length;
         var imgLoadHandler = function () {
             loadedImages--;
             if (loadedImages <= 0) {
@@ -98,6 +99,9 @@ $(function () {
 
         var items = [];
         for (var i = 0; i < n; i++) {
+            if (exclude.indexOf(i.toString()) >= 0) {
+                continue;
+            }
             var item = template.replace(/\{index\}/g, i < 10 ? '0' + i.toString() : i.toString());
             var $item = $(item);
             $item.find('img').on('load', imgLoadHandler);
