@@ -1,6 +1,7 @@
 body {
     width: 100%;
     height: 100%;
+    background: #222222;
 }
 
 html {
@@ -28,6 +29,7 @@ html {
     padding-left: 0;
     padding-right: 0;
     margin-top: 10px;
+    line-height: 2;
 }
 
 .stairs-section {
@@ -74,13 +76,17 @@ html {
     margin: 50px 0 30px;
 }
 
+.heading-text h1 .mobile {
+    display: none;
+}
+
 .heading-text h2 {
     font: 32px "PT Sans Narrow", sans-serif;
     color: #222222;
     margin: 0;
 }
 
-.heading-text span {
+.heading-text .info span {
     display: block;
     font: 16px "PT Sans Narrow", sans-serif;
     color: #222222;
@@ -114,9 +120,18 @@ html {
     }
 }
 
-@media (max-width: 640px) {
-    .heading-text h2 {
+@media (max-width: 767px) {
+    .heading-text h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .heading-text h1 .desktop {
         display: none;
+    }
+
+    .heading-text h1 .mobile {
+        display: inline;
     }
 }
 
@@ -132,6 +147,10 @@ html {
     }
 
     .heading-text h1 {
+        text-align: center;
+    }
+
+    .heading-text h2 {
         text-align: center;
     }
 }
