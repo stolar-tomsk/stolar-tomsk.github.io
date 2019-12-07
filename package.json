@@ -5,6 +5,7 @@
         "blueimp-gallery": "^2.36.0",
         "bootstrap": "^4.4.1",
         "font-awesome": "^4.7.0",
+        "imagesloaded": "^4.1.4",
         "jquery": "^3.4.1",
         "masonry-layout": "^4.2.2"
     },
@@ -13,6 +14,6 @@
         "del-cli": "^3.0.0"
     },
     "scripts": {
-        "libs": "del-cli libs && copyfiles --up 1 node_modules/blueimp-gallery/*/*.* node_modules/font-awesome/{css,fonts}/*.* node_modules/{bootstrap,jquery,masonry-layout}/dist/**/*.* libs"
+        "libs": "del-cli libs && copyfiles --up 1 node_modules/blueimp-gallery/*/*.* node_modules/imagesloaded/imagesloaded.pkgd.js node_modules/font-awesome/{css,fonts}/*.* node_modules/{bootstrap,jquery,masonry-layout}/dist/**/*.* libs"
     }
 }
