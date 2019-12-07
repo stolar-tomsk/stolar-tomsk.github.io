@@ -9,22 +9,25 @@ html {
     height: 100%;
 }
 
-.links-section {
-    /*padding-top: 10px;*/
+/* Sections */
+.contacts-section {
     padding-bottom: 10px;
+    position: relative;
+    z-index: 4;
+    background: #222222;
 }
 
-.links-section .row {
+.contacts-section .row {
     margin-left: -5px;
     margin-right: -5px;
 }
 
-.links-section .row > div {
+.contacts-section .row > div {
     padding-left: 5px;
     padding-right: 5px;
 }
 
-.links-section .btn {
+.contacts-section .btn {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -34,28 +37,23 @@ html {
 
 .stairs-section {
     height: auto;
-    /*min-height: 100%;*/
-    /*padding-top: 30px;*/
+    position: relative;
+    z-index: 5;
 }
 
-.doors-section {
-    height: auto;
-    /*min-height: 100%;*/
-    /*padding-top: 30px;*/
+body.fixed-contacts .contacts-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 6;
 }
 
-/* centered columns styles */
-.row-centered {
-    text-align: center;
+body.fixed-contacts .about-section {
+    padding-bottom: 78px;
 }
 
-.col-centered {
-    display: inline-block;
-    float: none;
-    text-align: left; /* reset the text-align */
-    /*margin-right: -4px; !* inline-block space fix *!*/
-}
-
+/* Heading */
 .heading-image {
     background: url("../img/heading.png") no-repeat;
     width: 100%;
@@ -133,6 +131,16 @@ html {
     .heading-text h1 .mobile {
         display: inline;
     }
+
+    .contacts-section .btn .label:not(.first) {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .contacts-section .btn .label {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -153,12 +161,6 @@ html {
     .heading-text h2 {
         text-align: center;
     }
-}
-
-a,
-a:hover,
-a:focus {
-    color: sienna;
 }
 
 /* Blueimp */

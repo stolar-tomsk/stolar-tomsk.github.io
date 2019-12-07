@@ -29,4 +29,14 @@ $(function () {
             $grid.masonry('layout');
         });
     });
+
+
+    function checkFixedContacts() {
+        $('body').toggleClass('fixed-contacts', $(window).scrollTop() > 315);
+    }
+
+    $(window).scroll(function () {
+        checkFixedContacts();
+    });
+    checkFixedContacts();
 });
