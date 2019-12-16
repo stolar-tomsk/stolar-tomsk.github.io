@@ -245,7 +245,16 @@ body.fixed-contacts .about-section {
 .grid-item a:hover {
     z-index: 20;
     -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .grid-item a:hover {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
 }
 
 .grid-item img {
