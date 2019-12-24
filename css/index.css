@@ -39,6 +39,18 @@ html {
     height: auto;
     position: relative;
     z-index: 5;
+    margin-top: -10px;
+}
+
+.stairs-section h4,
+.stairs-section h5 {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 2px;
+    padding: 0.4em 0 0.4em;
+    background: #343a40;
+    font-weight: normal;
 }
 
 body.fixed-contacts .contacts-section {
