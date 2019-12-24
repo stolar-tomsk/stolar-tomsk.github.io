@@ -11,7 +11,8 @@
     },
     "devDependencies": {
         "copyfiles": "^2.1.1",
-        "del-cli": "^3.0.0"
+        "del-cli": "^3.0.0",
+        "jimp": "^0.9.3"
     },
     "scripts": {
         "libs": "del-cli libs && copyfiles --up 1 node_modules/blueimp-gallery/*/*.* node_modules/imagesloaded/imagesloaded.pkgd.js node_modules/font-awesome/{css,fonts}/*.* node_modules/{bootstrap,jquery,masonry-layout}/dist/**/*.* libs"
