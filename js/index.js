@@ -30,6 +30,11 @@ $(function () {
             // layout Masonry after each image loads
             $grid.imagesLoaded().progress(function () {
                 $grid.masonry('layout');
+                $grid.find('.grid-item img').each(function () {
+                    if (this.complete && this.naturalHeight > 0) {
+                        $(this).closest('.grid-item').addClass('loaded');
+                    }
+                });
             });
             $(window).resize(function () {
                 $grid.masonry('layout');
