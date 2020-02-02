@@ -39,7 +39,7 @@ html {
     height: auto;
     position: relative;
     z-index: 5;
-    margin-top: -10px;
+    margin-top: -2px;
 }
 
 .stairs-section h4,
@@ -47,7 +47,7 @@ html {
     color: #fff;
     width: 100%;
     text-align: center;
-    margin: 10px 0 2px;
+    margin: 2px 0 2px;
     padding: 0.4em 0 0.4em;
     background: #343a40;
     font-weight: normal;
@@ -213,16 +213,30 @@ body.fixed-contacts .about-section {
 }
 
 /* Masonry */
-.grid-sizer,
-.grid-item {
-    width: 33%;
+.stairs-section .row {
+    margin-right: -2px;
+    margin-left: -2px;
 }
 
-@media screen and (min-width: 1001px) {
-    .grid-sizer,
-    .grid-item {
-        width: 25%;
-    }
+.stairs-section .row [class^="col-"] {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.grid {
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 25%;
+}
+
+.half-size .grid-sizer,
+.half-size .grid-item {
+    width: 50%;
 }
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
