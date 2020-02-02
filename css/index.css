@@ -33,6 +33,7 @@ html {
     padding-right: 0;
     margin-top: 10px;
     line-height: 2;
+    box-shadow: none !important;
 }
 
 .stairs-section {
