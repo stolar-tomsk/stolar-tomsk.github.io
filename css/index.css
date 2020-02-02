@@ -49,8 +49,9 @@ html {
     text-align: center;
     margin: 2px 0 2px;
     padding: 0.4em 0 0.4em;
-    background: #343a40;
     font-weight: normal;
+    position: relative;
+    z-index: 1;
 }
 
 body.fixed-contacts .contacts-section {
@@ -221,6 +222,18 @@ body.fixed-contacts .about-section {
 .stairs-section .row [class^="col-"] {
     padding-left: 2px;
     padding-right: 2px;
+}
+
+.stairs-section .row [class^="col-"]:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    top: 2px;
+    left: 2px;
+    background: #343a40;
+    z-index: 0;
 }
 
 .grid {
